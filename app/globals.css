@@ -98,3 +98,24 @@
 @media(min-width:1500px){.inventory{width:380px;min-width:380px}.inventory-top{padding:30px}.inventory-list{padding:0 20px}.inventory-bottom{padding:20px 30px}.facility-card{padding:22px 12px}.card-copy strong{font-size:16px}}
 @media(max-width:900px){.inventory{width:295px;min-width:295px}.top-meta{display:none}.topbar{padding:0 18px}.map-caption{max-width:260px;left:18px;padding:18px}.map-caption h2{font-size:23px}.breadcrumb{display:none}.map-top{justify-content:flex-end;top:14px;right:14px}.map-legend{left:15px;font-size:10px;gap:9px}.inventory-top{padding:22px 18px 14px}.inventory h1{font-size:24px}.summary{margin:20px 0}.inventory-bottom{padding:15px 18px}.placement-banner{font-size:12px;gap:7px;white-space:normal;width:calc(100% - 24px);top:72px}}
 @media(max-width:640px){.topbar{height:64px;padding:0 14px}.brand{font-size:17px;gap:8px}.brand small{font-size:8px;letter-spacing:1.3px}.brand-icon{height:35px;width:35px}.top-actions{gap:4px}.export-button{padding:8px;border:0}.export-button span,.avatar{display:none}.workspace{flex-direction:column-reverse}.map-stage{height:51%;flex:none}.inventory{width:100%;min-width:0;flex:1;min-height:0;border-right:0;border-top:1px solid #dde7ea}.inventory-top{padding:15px 17px 9px}.inventory-top>.eyebrow,.inventory-top>.muted,.summary{display:none}.inventory h1{font-size:22px;margin:0 0 12px}.inventory .back{margin:0 0 8px;font-size:11px}.search{padding:8px 10px}.inventory-list{padding:0 10px}.facility-card,.tank-card{padding:12px 8px}.facility-symbol{height:37px;width:37px}.inventory-bottom{padding:10px 17px}.sync-status{margin-top:7px;font-size:10px}.primary,.secondary{padding:10px 12px}.map-caption{display:none}.map-legend{bottom:23px;padding:9px 11px;gap:8px;left:12px}.map-top{top:10px;right:10px}.layer-switch button{padding:6px 8px}.leaflet-control-zoom{margin-right:10px!important}.empty-state{padding:14px 20px}.empty-state>svg,.empty-state>span{display:none}.empty-state h2{font-size:15px}.empty-state p{font-size:12px;margin-bottom:0}.facility-links{margin-top:9px}.filter-row{margin-top:8px}.tile-warning{top:60px;left:10px;right:10px;font-size:11px}.placement-banner{top:60px}.editor-form{padding:0 21px 24px}.editor-sheet [data-slot=sheet-header]{padding:28px 21px 10px}}
+
+
+/* Approved facility artwork, rendered from the original proposal as a sprite. */
+.facility-art{display:inline-block;width:32px;height:32px;flex:0 0 32px;background-image:url('/icons/facility-symbols.png');background-repeat:no-repeat;background-color:#fff;border-radius:2px;background-size:124.18px 62.09px}
+.facility-art.refinery{background-position:-6.3px 0}
+.facility-art.petrochemical{background-position:-46.2px -2.5px}
+.facility-art.storage{background-size:106.44px 53.22px;background-position:-72.6px -3px}
+.facility-symbol{flex-shrink:0;background:#fff!important}
+.facility-marker.pictogram{display:grid;place-items:center;background:#fff;border:2px solid currentColor;border-radius:50%;line-height:normal}
+.facility-marker.pictogram.refinery{color:#007e63;background:#fff}
+.facility-marker.pictogram.petrochemical{color:#0969a2;background:#fff}
+.facility-marker.pictogram.storage{color:#cb6806;background:#fff}
+.legend-facility .facility-art{transform:scale(.65);margin:-6px}
+.map-legend{flex-wrap:wrap;max-width:calc(100% - 70px)}
+/* Keep the form above the Leaflet panes and backdrop, including mobile Safari. */
+.editor-sheet[data-slot=sheet-content]{position:fixed;inset:0 0 0 auto;width:min(480px,100vw);max-width:100vw;height:100dvh;max-height:100dvh;display:flex;flex-direction:column;overflow-y:auto;overscroll-behavior:contain;z-index:1200!important;transform:none!important;animation:none!important;visibility:visible;opacity:1;background:#fff;padding-bottom:env(safe-area-inset-bottom)}
+[data-slot=sheet-overlay]{position:fixed;inset:0;z-index:1190!important}
+[data-slot=alert-dialog-overlay]{z-index:1300!important}
+[data-slot=alert-dialog-content],[data-slot=select-content]{z-index:1310!important}
+.editor-sheet .field input::placeholder{color:#8a969f;opacity:1}
+@media(max-width:640px){.editor-sheet .field input,.editor-sheet .field textarea{font-size:16px}}

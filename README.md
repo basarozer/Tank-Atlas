@@ -12,7 +12,7 @@ Private refinery and tank inventory for Türkiye. Select a facility, zoom to sat
 
 Records are stored in Cloudflare D1, not browser storage. Deployment is owner-private through ChatGPT sign-in. **Do not make the deployment public without adding application authorization.** Updates use record versions to reject concurrent overwrites. Failed saves retain the user's form. JSON export provides a data copy.
 
-Five approximate facility centers are included. No real tank tags, equipment claims, or tank coordinates have been fabricated; tank markers are added by the user. Satellite imagery is Esri World Imagery and street maps are OpenStreetMap. Imagery is not live. Google Maps opens separately. Documents are links, not uploads.
+Seven approximate facility reference locations are included. No real tank tags, equipment claims, or tank coordinates have been fabricated; tank markers are added by the user. Satellite imagery is Esri World Imagery and street maps are OpenStreetMap. Imagery is not live. Google Maps opens separately. Documents are links, not uploads.
 
 ## Development
 
@@ -27,3 +27,13 @@ Node 22.13+; pnpm install; pnpm dev; pnpm build. Schema: db/schema.ts. Generate 
 - https://mapcarta.com/W129693533 — Tüpraş Batman
 
 Facility coordinates can be corrected in the editor. Map attribution remains visible.
+
+
+## Facility symbols and additional location references
+
+The approved refinery, petrochemical and storage artwork is bundled in public/icons/facility-symbols.png and displayed in the list, legend and map. Tank name placeholder: TK-555.
+
+- Petkim: https://mapcarta.com/W618579217 (approximate industrial area center).
+- STAD: https://cdnc.heyzine.com/files/uploaded/fde829c0e537b8c157ab47925782110441fc89c0.pdf (SOCAR Akaryakıt Depolama İskelesi, 38°46′21″ N, 26°55′42″ E). This is a pier reference, not a verified tank-farm centroid; edit the facility coordinates to refine it.
+
+The tank editor has explicit viewport positioning and separate layers for its backdrop, form and confirmation dialogs, including mobile browsers. Map placement precedes opening the form.

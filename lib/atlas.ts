@@ -6,6 +6,9 @@ export type Facility=z.infer<typeof facilitySchema>;
 export type Tank=z.infer<typeof tankSchema>;
 export type AtlasRecord=Facility|Tank;
 export const facilities:Facility[]=[
+{id:'petkim',kind:'facility',name:'Petkim Petrokimya Tesisi',operator:'SOCAR',city:'Aliağa, İzmir',type:'Petrokimya',lat:38.78731,lng:26.93638,version:0},
+// STAD starts at the published terminal pier reference; its position remains editable.
+{id:'stad',kind:'facility',name:'STAD Akaryakıt Depolama',operator:'SOCAR',city:'Aliağa, İzmir',type:'Terminal',lat:38.7725,lng:26.928333,version:0},
 {id:'tupras-izmir',kind:'facility',name:'Tüpraş İzmir Rafinerisi',operator:'Tüpraş',city:'Aliağa, İzmir',type:'Rafineri',lat:38.81423,lng:26.94143,version:0},
 {id:'star',kind:'facility',name:'STAR Rafineri',operator:'SOCAR',city:'Aliağa, İzmir',type:'Rafineri',lat:38.79643,lng:26.92591,version:0},
 {id:'tupras-izmit',kind:'facility',name:'Tüpraş İzmit Rafinerisi',operator:'Tüpraş',city:'Körfez, Kocaeli',type:'Rafineri',lat:40.750,lng:29.76667,version:0},
