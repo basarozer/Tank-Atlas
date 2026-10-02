@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Tank Atlas | Rafineri ve Tank Envanteri",
-  description: "Türkiye rafinerilerini uydu üzerinden inceleyin, tank ve ekipman bilgilerinizi güvenle kaydedin.",
+  title: "Tank Atlas | Refinery and Tank Inventory",
+  description: "Explore facilities on satellite maps and manage your tank and equipment inventory.",
   other: {
     "codex-preview": "development",
   },
@@ -19,7 +19,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="tr">
+    <html lang="en">
       <body className="antialiased">{children}</body>
     </html>
   );
